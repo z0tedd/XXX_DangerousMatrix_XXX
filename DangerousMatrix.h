@@ -7,8 +7,19 @@ namespace  DM{
   class Matrix{
   private:
     std::vector<std::vector<T>> data;
+    void MakeItRectangle(std::vector<std::vector<T>>& data){
+      std::cout << "do something";
+    };
+
   public:
-    Matrix(const std::vector<std::vector<T>>& matrixData) : data(matrixData) {}
+    Matrix(const std::vector<std::vector<T>>& matrixData,
+    bool NotDangerous = true) : data(matrixData) {
+      if (NotDangerous){
+        
+        MakeItRectangle(data);
+      } 
+
+    }
     
     const size_t GetRows() const{
         return data.size();
